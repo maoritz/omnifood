@@ -12,12 +12,14 @@ Orange color: #e67e22
   box-sizing: border-box;
 }
 
-html {
+html,
+body {
   color: #555;
   font-family: "Lato", "Arial", "sans-serif";
   font-size: 20px;
   font-weight: 300;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 .clearfix {
@@ -350,7 +352,7 @@ header {
 /* CITIES SECTION */
 /* --------------------------------------------- */
 
-.cities-details {
+.cities-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
