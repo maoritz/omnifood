@@ -78,6 +78,20 @@
     display: grid;
     grid-template-columns: 1fr;
   }
+
+  .city-box {
+    margin-right: 5px;
+    margin-bottom: 40px;
+  }
+
+  .city-box img {
+    width: 100%;
+    height: auto;
+  }
+
+  .city-list {
+    list-style: none;
+  }
   .main-nav {
     display: none;
   }
