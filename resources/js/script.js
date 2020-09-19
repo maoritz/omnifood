@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  // For the sticky navigation
+  // For the sticky nav-bar
   $(".js--section-features").waypoint(
     function (direction) {
       if (direction == "down") {
@@ -11,6 +11,7 @@ $(document).ready(function () {
     { offset: "60px;" }
   );
 
+  // Nvigation scroll
   $(".js--scroll-to-start").click(function () {
     $("html, body").animate(
       { scrollTop: $(".js--section-features").offset().top },
@@ -37,5 +38,21 @@ $(document).ready(function () {
       { scrollTop: $(".js--section-cities").offset().top },
       1000
     );
+  });
+
+  // Mobile nav
+  $(".js--nav-icon").click(function () {
+    const nav = $(".js--main-nav");
+    const icon = $("#menu");
+
+    nav.slideToggle(200);
+
+    if (icon.attr("name") === "menu") {
+      $(icon.removeAttr("name"));
+      $(icon.attr("name", "close"));
+    } else {
+      $(icon.removeAttr("name"));
+      $(icon.attr("name", "menu"));
+    }
   });
 });
