@@ -189,6 +189,20 @@
   }
 }
 
+@media (max-width: 366px) {
+  .hero-text-box {
+    font-size: 60%;
+  }
+
+  .logo-white {
+    height: 75px;
+  }
+  .main-nav li a:link,
+  .main-nav li a:visited {
+    font-size: 70%;
+  }
+}
+
 /* 
 320px — 480px: Mobile devices.
 481px — 768px: iPads, Tablets.

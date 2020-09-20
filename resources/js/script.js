@@ -43,9 +43,9 @@ $(document).ready(function () {
   // Mobile nav
   $(".js--nav-icon").click(function () {
     const nav = $(".js--main-nav");
-    const icon = $("#menu");
-
     nav.slideToggle(200);
+
+    const icon = $("#menu");
 
     if (icon.attr("name") === "menu") {
       $(icon.removeAttr("name"));
