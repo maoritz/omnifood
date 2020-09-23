@@ -55,4 +55,43 @@ $(document).ready(function () {
       $(icon.attr("name", "menu"));
     }
   });
+
+  // Animations on scroll
+  $(".js--wp-fadeIn").waypoint(
+    function (direction) {
+      $(".js--wp-fadeIn").addClass("animate__animated animate__fadeIn");
+    },
+    {
+      offset: "50%",
+    }
+  );
+
+  $(".js--wp-fadeInUp").waypoint(
+    function (direction) {
+      $(".js--wp-fadeInUp").addClass("animate__animated animate__fadeInUp");
+    },
+    {
+      offset: "50%",
+    }
+  );
+
+  $(".js--wp-fadeInRightBig").waypoint(
+    function (direction) {
+      $(".js--wp-fadeInRightBig").addClass(
+        "animate__animated animate__fadeInRight"
+      );
+    },
+    {
+      offset: "60%",
+    }
+  );
+
+  $(".js--wp-pulse").waypoint(
+    function (direction) {
+      $(".js--wp-pulse").addClass("animate__animated animate__pulse");
+    },
+    {
+      offset: "50%",
+    }
+  );
 });

@@ -192,7 +192,7 @@ input[type="submit"]:active {
 
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(../img/hero.jpg);
+    url(../img/hero-min.jpg);
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
@@ -205,6 +205,10 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 
 .logo-white {
@@ -334,11 +338,21 @@ header {
   opacity: 0.7;
   width: 100%;
   transform: scale(1.15);
+  transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  -o-transform: scale(1.15);
   transition: 1s;
 }
 
 .meal-photo img:hover {
   transform: scale(1.03);
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform: scale(1.03);
   opacity: 1;
 }
 
@@ -428,7 +442,7 @@ header {
 /* --------------------------------------------- */
 .section-testimonials {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(../img/back-customers.jpg);
+    url(../img/back-customers-min.jpg);
   background-size: cover;
   background-attachment: fixed;
   color: #fff;
@@ -643,4 +657,20 @@ footer p {
   color: #888;
   text-align: center;
   margin-top: 20px;
+}
+
+/* --------------------------------------------- */
+/* Animations */
+/* --------------------------------------------- */
+
+.js--wp-fadeIn,
+.js--wp-fadeInUp,
+.js--wp-fadeInRightBig {
+  opacity: 0;
+}
+
+.js--wp-fadeIn.animate__animated,
+.js--wp-fadeInUp.animate__animated,
+.js--wp-fadeInRightBig.animate__animated {
+  opacity: 1;
 }
