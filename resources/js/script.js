@@ -95,3 +95,66 @@ $(document).ready(function () {
     }
   );
 });
+
+async function showComments() {
+  try {
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/comments?postId=1"
+    );
+    const commentsArray = await response.json();
+    console.log(commentsArray);
+    const commentContainer = $(".comments-container");
+
+    for (let i = 1; i <= 3; i++) {
+      const comment = commentsArray[i].body;
+      commentContainer.append(`
+    <div class=comment id=comment${i}>
+      <blockquote>
+        ${comment}
+      </blockquote>
+    </div>`);
+    }
+  } catch (err) {
+    console.log(err);
+  }
+  showCommentsAuthor();
+}
+
+async function showCommentsAuthor() {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+    const usersArray = await response.json();
+
+    for (let i = 1; i <= 3; i++) {
+      const name = usersArray[i].name;
+      $(`#comment${i}`).append(
+        `<cite
+        ><img
+          src="./resources/img/customer-${i}.jpg"
+          alt="customer ${i} photo"
+        />${name}</cite
+      >`
+      );
+    }
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+showComments();
+
+/* <div class=comment>
+<blockquote>
+  Omnifood is just awesome! I just launched a startup which leaves me
+  with no time for cooking, so Omnifood is a life-saver. Now that I
+  got used to it, I couldn't live without my daily meals!
+  <cite
+    ><img
+      src="./resources/img/customer-1.jpg"
+      alt="customer 1 photo"
+    />Alberto Duncan</cite
+  >
+</blockquote>
+</div> */
+
+// comments-container
